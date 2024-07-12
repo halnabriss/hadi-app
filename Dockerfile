@@ -1,6 +1,7 @@
 FROM node:14
 WORKDIR /hadiapp
-COPY . .
+COPY package.json .
 RUN npm install
+COPY . .
 EXPOSE 5050
-CMD [ "npm", "start" ]
+CMD [ "npm", "run" , "start-dev" ]
