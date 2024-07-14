@@ -19,5 +19,5 @@ jobs:
 
     - name: Build the Docker image
       run: 
-        docker build --tag halnabriss/hadi-app:$(date +%s) .
+        docker build -t halnabriss/hadi-app:$(date +%s) .
         docker push halnabriss/hadi-app:$(date +%s)
