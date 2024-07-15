@@ -19,8 +19,8 @@ jobs:
 
     - name: Build the Docker image
       run: 
-        docker build -t halnabriss/hadi-app:$(date +%Y%m%d.%H%M) .
+        docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/hadi-app:$(date +%Y%m%d.%H%M) .
 
     - name: push the image
       run: 
-        docker push halnabriss/hadi-app:$(date +%Y%m%d.%H%M)
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/hadi-app:$(date +%Y%m%d.%H%M)
